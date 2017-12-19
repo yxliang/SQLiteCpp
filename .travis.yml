@@ -135,7 +135,7 @@ matrix:
           packages:
             - g++-7
       env:
-        - CXX=gcc-7
+        - CC=gcc-7
         - CXX=g++-7
         - CXXFLAGS="-std=c++14 -Wall -Wextra -pedantic"
     # gcc 7 std=c++1z
