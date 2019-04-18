@@ -14,3 +14,9 @@ add_library(sqlite3
 if (UNIX AND (CMAKE_COMPILER_IS_GNUCXX OR ${CMAKE_CXX_COMPILER_ID} STREQUAL "Clang"))
     set_target_properties(SQLiteCpp PROPERTIES COMPILE_FLAGS "-fPIC")
 endif (UNIX AND (CMAKE_COMPILER_IS_GNUCXX OR ${CMAKE_CXX_COMPILER_ID} STREQUAL "Clang"))
+
+install(TARGETS sqlite3
+    EXPORT sqlite3Config
+    LIBRARY DESTINATION lib
+    ARCHIVE DESTINATION lib
+    COMPONENT libraries)
